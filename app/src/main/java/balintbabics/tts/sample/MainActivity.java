@@ -23,9 +23,9 @@ import butterknife.Unbinder;
 public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.stop_button)
-    Button cancelButton;
+    Button stopButton;
     @BindView(R.id.speech_button)
-    Button speakButton;
+    Button speechButton;
     @BindView(R.id.edit_text)
     EditText editText;
     @BindString(R.string.on_start)
@@ -53,8 +53,8 @@ public class MainActivity extends AppCompatActivity {
         unbinder = ButterKnife.bind(this);
         initTextToSpeech(this);
 
-        speakButton.setOnClickListener(v -> onSpeakClick());
-        cancelButton.setOnClickListener(v -> onCancelClick());
+        speechButton.setOnClickListener(v -> onSpeechClick());
+        stopButton.setOnClickListener(v -> onStopClick());
     }
 
     @Override
@@ -80,14 +80,13 @@ public class MainActivity extends AppCompatActivity {
     private TextToSpeech.OnInitListener textToSpeechOnInitListener = status -> {
     };
 
-    private void onSpeakClick() {
+    private void onSpeechClick() {
         if(editText.getText().toString().trim().isEmpty()) {
             Toast.makeText(this, R.string.input_something, Toast.LENGTH_LONG).show();
             return;
         }
 
         say(editText.getText().toString().trim(), new TextToSpeechCallback() {
-
             @Override
             public void onStart() {
                 Log.d(TAG, onStart);
@@ -105,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void onCancelClick() {
+    private void onStopClick() {
         if(textToSpeech != null) {
             textToSpeech.stop();
         }
