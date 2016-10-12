@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Android-Text-To-Speech-Sample</string>
+    <string name="app_header">Android TTS Sample</string>
+    <string name="hint">Write something to speech</string>
+    <string name="speech_button">Speech</string>
+    <string name="stop_button">Stop</string>
+    <string name="input_something">Please input something to speak!</string>
+    <string name="on_start">Synthesis started.</string>
+    <string name="on_complete">Synthesis completed.</string>
+    <string name="on_error">Can\'t start synthesis.</string>
+    <string name="tag">Android TTS Sample</string>
+</resources>
