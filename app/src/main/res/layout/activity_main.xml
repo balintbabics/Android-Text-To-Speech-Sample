@@ -23,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-        <LinearLayout
+        <RelativeLayout
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -35,13 +35,23 @@
                 android:id="@+id/speech_button"
                 android:text="@string/speech_button"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"/>
+
+            <Button
+                android:id="@+id/article_button"
+                android:text="@string/article_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/speech_button"/>
 
             <Button
                 android:id="@+id/stop_button"
                 android:text="@string/stop_button"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
+                android:layout_height="wrap_content"
+                android:layout_below="@id/article_button"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
     </RelativeLayout>
 </RelativeLayout>

@@ -9,4 +9,7 @@
     <string name="on_complete">Synthesis completed.</string>
     <string name="on_error">Can\'t start synthesis.</string>
     <string name="tag">Android TTS Sample</string>
+    <string name="article_button">Speech the article</string>
+    <string name="article_text">Munkaszüneti nappá nyilvánítják a nagypénteket - jelentette be Orbán Viktor miniszterelnök a Magyarországi Református Egyházak Zsinatának emlékülésén.  Így ezentúl négynaposak lesznek a húsvéti hétvégék.  A Kereszténydemokrata Néppárt már 2011-ben bedobta az ötletet. A párt honlapja szerint akkor Varga László kezdeményezte a nagypéntek munkaszüneti nappá nyilvánítását.  Akkor az Országgyűlés honlapján közzétett egyéni képviselői indítványát azzal indokolta, hogy az ünnep az Európa önazonosságát jelentő keresztény kultúra egyik kiemelkedő napja, amit minden magát keresztény, illetve keresztyén egyháznak valló közösség a legnagyobb ünnepei között tart számon.  Jövőre a nagypéntek április 14-re esik.  Nagypénteken a keresztények Jézus halálára emlékeznek.</string>
+    <string name="article_question">Mi ez? Mi az? Ki ez? Ki az? Ki ő? Hová mész? Kivel mész? Mikorra mész? Melyik a kedvenc ételed? Mikod születtél?</string>
 </resources>

@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.stop_button)
     Button stopButton;
+    @BindView(R.id.article_button)
+    Button articleButton;
     @BindView(R.id.speech_button)
     Button speechButton;
     @BindView(R.id.edit_text)
@@ -34,6 +36,10 @@ public class MainActivity extends AppCompatActivity {
     String onCompleted;
     @BindString(R.string.on_error)
     String onError;
+    @BindString(R.string.article_text)
+    String articleText;
+    @BindString(R.string.article_question)
+    String articleQuestion;
     @BindString(R.string.tag)
     String TAG;
 
@@ -54,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         initTextToSpeech(this);
 
         speechButton.setOnClickListener(v -> onSpeechClick());
+        articleButton.setOnClickListener(v -> onArticleSpeechClick());
         stopButton.setOnClickListener(v -> onStopClick());
     }
 
@@ -87,6 +94,30 @@ public class MainActivity extends AppCompatActivity {
         }
 
         say(editText.getText().toString().trim(), new TextToSpeechCallback() {
+            @Override
+            public void onStart() {
+                Log.d(TAG, onStart);
+            }
+
+            @Override
+            public void onCompleted() {
+                Log.d(TAG, onCompleted);
+            }
+
+            @Override
+            public void onError() {
+                Log.d(TAG, onError);
+            }
+        });
+    }
+
+    private void onArticleSpeechClick() {
+        if(articleText.trim().isEmpty()) {
+            Toast.makeText(this, R.string.input_something, Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        say(articleText.trim().replace(" - ", ", "), new TextToSpeechCallback() {
             @Override
             public void onStart() {
                 Log.d(TAG, onStart);
